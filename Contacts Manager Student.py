@@ -34,8 +34,7 @@ def search():
     pass
     
 def exit():
-    pass
-
+   win.destroy()
 
 
 print('&&&&&&&&&&&&&&&&&')
