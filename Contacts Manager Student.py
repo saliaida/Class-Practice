@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 from db import Database
+win = Tk()
 
 db = Database('d:/ContactsManager1.db')
 
@@ -26,7 +27,7 @@ def exit():
     pass
 
 
-win = Tk()
+
 
 
 name_text = StringVar()
