@@ -28,7 +28,7 @@ def exit():
 
 
 
-
+print('&&&&&&&&&&&&&&&&&')
 
 name_text = StringVar()
 name_label = Label(win, text = "Name:", font = ('Tahoma 14'))
