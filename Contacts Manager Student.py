@@ -34,7 +34,15 @@ def remove_item():
 
 
 def update_item():
-    pass
+    index = contact_list.curselction()
+    line = contact_list.get(index)
+    ls = line.sqlit(',')
+    name_entry.insert(0,ls[0])
+    family_entry.insert(0,ls[1])
+    address_entry.insert(0,ls[2])
+    phone_entry.insert(0,ls[3])
+
+    
 def clear_text():
     name = name_entry.delete(0,END)
     family = family_entry.delete(0,END)
@@ -48,7 +56,10 @@ def search():
     pass
     
 def exit():
-   win.destroy()
+   result = messagebox.askquestion("Exit","Are you sure?")
+   if result == "yes":
+       win.destroy()
+
 
 
 print('&&&&&&&&&&&&&&&&&')
