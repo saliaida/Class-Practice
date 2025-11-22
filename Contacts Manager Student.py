@@ -7,11 +7,21 @@ win = Tk()
 db = Database('d:/ContactsManager1.db')
 
 def show_list():   
-    pass
+    records=db.fetch()
+    for i in records:
+        contact_list.insert(END,i)
+
 def add_item():
     pass
 def select_item(event):    
-    pass
+    index=contact_list.curselection()
+    record1=contact_list.get(index)
+    name_entry.insert(record1[1])
+    family_entry.insert(record1[3])
+    phone_entry.insert(record1[4])
+    address_entry.insert(record1[2])
+   
+
 
 def remove_item():
     pass
