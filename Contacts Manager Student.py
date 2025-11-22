@@ -14,12 +14,25 @@ def select_item(event):
     pass
 
 def remove_item():
-    pass
+    index = contact_list.curselection()
+    data = contact_list.get(index)
+    db.remove(data[0])
+    r = messagebox.askquestion('Delete','Are you sure to delete?')
+    contact_list.delete(0,END)
+    show_list()
+
 
 def update_item():
     pass
 def clear_text():
-    pass
+    name = name_entry.delete(0,END)
+    family = family_entry.delete(0,END)
+    address = address_entry.delete(0,END)
+    phone = phone_entry.delete(0,END)
+    name_entry.focus_set()
+    clear_text()
+
+
 def search():
     pass
     
