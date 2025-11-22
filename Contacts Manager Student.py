@@ -20,6 +20,7 @@ def remove_item():
     r = messagebox.askquestion('Delete','Are you sure to delete?')
     contact_list.delete(0,END)
     show_list()
+    print('**********')
 
 
 def update_item():
